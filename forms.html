@@ -7,19 +7,20 @@
     <title>Document</title>
 </head>
 <body>
-    <form>
-        <div><label for="fullName">Full Name:</label><input id="fullName" type="text" placeholder="Full name"></div>
-        <div><label for="email">Email:</label><input id="email" type="text" placeholder="Email"></div>
+    <form action="https://formspree.io/f/mjvjwgeb" method="POST">
+        <div><label for="fullName">Full Name:</label><input id="fullName" type="text" placeholder="Full name" name="form_fullname" required></div>
+        <div><label for="email">Email:</label><input id="email" type="email" placeholder="Email" name="form_email" required></div>
         <div>
-            <select>
-                <option disabled hidden selected>Select Sex:</option>
+            <label for="sex">Sex:</label>
+            <select id="sex" name="form_gender" required>
+                <option value="" disabled hidden selected>Select Sex:</option>
                 <option>Male</option>
                 <option>Female</option>
                 <option>Other</option>
             </select>
         </div>
         <div>
-            <label for="write">Tell us more:</label><textarea id="write" placeholder="I am a text area"></textarea>
+            <label for="write">Tell us more:</label><textarea id="write" name="form_message" placeholder="I am a text area" required></textarea>
         </div>
         <div>
             <button>Sign Up!</button>
